@@ -1,8 +1,6 @@
 package bai5;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductTest {
     private int n;
@@ -24,6 +22,7 @@ public class ProductTest {
 
         }
     }
+
     public void sapxep(){
         for (int i = 0; i < n-1; i++) {
             for (int j = i+1; j <n ; j++) {
@@ -43,6 +42,8 @@ public class ProductTest {
         ProductTest productTest=new ProductTest();
         productTest.nhap();
         productTest.xuat();
+//        List<Map.Entry<Integer,Product>> list=new ArrayList<>(map.entrySet());
+//        Collections.sort(list,(o1, o2) -> o1.getValue().getYearMaking())
         productTest.sapxep();
         System.out.println("After sort: ");
         productTest.xuat();
