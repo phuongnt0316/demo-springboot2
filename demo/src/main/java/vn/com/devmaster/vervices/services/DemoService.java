@@ -27,6 +27,9 @@ public class DemoService {
     public  StudentDTO getStudent(String userName,String password){
         Student student=demoRepository.getStudent(userName,password);
         return  studentMapper.toDTO(student);
-
+    }
+    public List<StudentDTO> getStudentByName(String name){
+        List<Student> list=demoRepository.getStudentByName(name);
+        return studentMapper.toDTO(list);
     }
 }

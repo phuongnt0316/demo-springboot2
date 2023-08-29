@@ -28,6 +28,10 @@ public class DemoController{
     StudentDTO getStudent(@RequestParam("userName") String userName,@RequestParam("password") String password){
         return demoService.getStudent(userName,password);
     }
+    @RequestMapping(method = RequestMethod.GET,value ="/studentGetByName")
+    List<StudentDTO> getStudentByName(@RequestParam("name") String name){
+        return demoService.getStudentByName(name);
+    }
 
 
 

@@ -22,8 +22,8 @@ public class DemoRepository {
         Student student2= Student
                 .builder()
                 .age(19)
-                .firstName("Linh")
-                .lastName("Nguyen")
+                .firstName("Phuong")
+                .lastName("Pham")
                 .address("HD")
                 .userName("phuong123")
                 .password("123")
@@ -56,7 +56,7 @@ public class DemoRepository {
                 .build();
         return student;
     }
-    public Student  getStudent(String userName,String password){
+    public Student getStudent(String userName,String password){
         List<Student>lstStudent=getAll();
         Student student=new Student();
         for(Student st:lstStudent){
@@ -67,5 +67,15 @@ public class DemoRepository {
         }
         return student;
 
+    }
+    public  List<Student> getStudentByName(String name){
+        List<Student> lstStudent=getAll();
+        List<Student> myList=new ArrayList<>();
+        for(Student st:lstStudent){
+            if(st.getFirstName().equals(name)){
+                myList.add(st);
+            }
+        }
+        return myList;
     }
 }
